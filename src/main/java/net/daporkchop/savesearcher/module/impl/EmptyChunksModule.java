@@ -40,9 +40,9 @@ public final class EmptyChunksModule extends AbstractSearchModule<PositionDataXZ
             if (section == null) {
                 continue;
             }
-			for (int y = 15; y >= 0; y--) {
-				for (int z = 15; z >= 0; z--) {
-					for (int x = 15; x >= 0; x--) {
+            for (int y = 15; y >= 0; y--) {
+                for (int z = 15; z >= 0; z--) {
+                    for (int x = 15; x >= 0; x--) {
                         if (section.getBlockId(x, y, z) != 0) {
                             return;
                         }

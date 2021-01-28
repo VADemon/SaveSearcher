@@ -65,10 +65,10 @@ public final class DoubleChestModule extends AbstractSearchModule<DoubleChestMod
         final int trappedChestId = this.trappedChestId;
         final int x = chunk.getX() << 4;
         final int z = chunk.getZ() << 4;
-		
-		for (int y = 255; y >= 0; y--) {
-			for (int zz = (xx & 1) == 0 ? 15 : 14; zz >= 0; zz -= 2) {
-				for (int xx = 15; xx >= 0; xx--) {
+        
+        for (int y = 255; y >= 0; y--) {
+            for (int zz = (xx & 1) == 0 ? 15 : 14; zz >= 0; zz -= 2) {
+                for (int xx = 15; xx >= 0; xx--) {
                     int id = access.getBlockId(x + xx, y, z + zz);
                     if (id == chestId)  {
                         if (access.getBlockId(x + xx + 1, y, z + zz) == chestId
