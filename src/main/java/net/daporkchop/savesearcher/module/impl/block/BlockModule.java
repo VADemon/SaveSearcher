@@ -125,9 +125,10 @@ public final class BlockModule extends AbstractSearchModule<Vec3i> {
             if (section == null) {
                 continue;
             }
-            for (int x = 15; x >= 0; x--) {
-                for (int y = 15; y >= 0; y--) {
-                    for (int z = 15; z >= 0; z--) {
+            
+			for (int y = 15; y >= 0; y--) {
+				for (int z = 15; z >= 0; z--) {
+					for (int x = 15; x >= 0; x--) {
                         if (section.getBlockId(x, y, z) == id && (meta == -1 || section.getBlockMeta(x, y, z) == meta)) {
                             handle.accept(new Vec3i(chunk.minX() + x, (section.getY() << 4) + y, chunk.minZ() + z));
                         }

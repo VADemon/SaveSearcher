@@ -56,8 +56,8 @@ final class BlockRangeModule extends AbstractSearchModule<Vec3i> {
         final int minY = this.minY;
 
         for (int y = maxY; y >= minY; y--) {
-            for (int x = 15; x >= 0; x--) {
-                for (int z = 15; z >= 0; z--) {
+			for (int z = 15; z >= 0; z--) {
+				for (int x = 15; x >= 0; x--) {
                     if (chunk.getBlockId(x, y, z) == id && (meta == -1 || chunk.getBlockMeta(x, y, z) == meta)) {
                         handle.accept(new Vec3i(chunk.minX() + x, y, chunk.minZ() + z));
                     }
